@@ -1,0 +1,119 @@
+/* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+  margin: 0;
+  color: #333;
+}
+
+/* Styling for the calculator container */
+.Form {
+  background-color:green;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field styles */
+input[type="text"] {
+  width: 100%;
+  font-size: 2rem;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: right;
+  background-color: white;
+  color: #333;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Input field focus styles */
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+/* Calculator button container (Grid layout for buttons) */
+.App {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+/* General button styles */
+input[type="button"] {
+  font-size: 1.6rem;
+  padding: 20px;
+  border: none;
+  background-color: gray;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Button hover and active effects */
+input[type="button"]:hover {
+  background-color: #e0e0e0;
+}
+
+input[type="button"]:active {
+  background-color: #ccc;
+}
+
+/* Button styles for operators and special functions */
+input[type="button"][value="+"]:hover,
+input[type="button"][value="-"]:hover,
+input[type="button"][value="*"]:hover,
+input[type="button"][value="/"]:hover,
+input[type="button"][value="%"]:hover,
+input[type="button"][value="="]:hover {
+  background-color: #ffcc00;
+  color: white;
+}
+
+input[type="button"][value="Clear"]:hover {
+  background-color: #ff6347;
+  color: white;
+}
+
+input[type="button"][value="Delete"]:hover {
+  background-color: #ff6347;
+  color: white;
+}
+
+/* Larger buttons for clear and delete */
+input[type="button"][value="Clear"],
+input[type="button"][value="Delete"] {
+  grid-column: span 2;
+}
+
+/* Styling for number and operator buttons */
+input[type="button"][value="="] {
+  background-color:white;
+  color: black;
+  grid-column: span 4;
+}
+
+input[type="button"][value="="]:active {
+  background-color: #e6b800;
+}
+
+input[type="button"][value="Clear"],
+input[type="button"][value="Delete"] {
+  background-color: #ff6347;
+  color: white;
+  grid-column: span 2;
+}
+
+input[type="button"][value="Clear"]:active,
+input[type="button"][value="Delete"]:active {
+  background-color: #e55347;
+}
